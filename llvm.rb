@@ -52,13 +52,6 @@ class Llvm < Formula
       end
     end
   
-    bottle do
-      cellar :any
-      sha256 "e3e64458543bfe1d74820523d5878d55bef3aaad4f06a05464ea910ea9420864" => :mojave
-      sha256 "5eb7a6eebe9ebfa25a3a0d4365e0dc04fb72ed65be4bbc867c7a92d968de3e21" => :high_sierra
-      sha256 "d00b3cb887d22294ee85abec309ad4c2dec2763a3cf06cb22a7866d9415433ac" => :sierra
-    end
-  
     # Clang cannot find system headers if Xcode CLT is not installed
     pour_bottle? do
       reason "The bottle needs the Xcode CLT to be installed."
