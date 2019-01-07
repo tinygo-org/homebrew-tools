@@ -1,3 +1,10 @@
 # homebrew-tools
 
-Homebrew formula for LLVM 7 with WASM support.
+Homebrew formula for installing LLVM 7 with WASM support. Required for using TinyGo to compile for WebAssembly target on macOS.
+
+## How To Use
+
+```
+brew tap tinygo-org/llvm
+brew install llvm
+```
