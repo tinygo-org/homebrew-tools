@@ -178,6 +178,7 @@ class Llvm < Formula
         -DLLVM_INSTALL_UTILS=ON
         -DLLVM_OPTIMIZED_TABLEGEN=ON
         -DLLVM_TARGETS_TO_BUILD=all
+        -DLLVM_EXPERIMENTAL_TARGETS_TO_BUILD=WebAssembly
         -DWITH_POLLY=ON
         -DFFI_INCLUDE_DIR=#{Formula["libffi"].opt_lib}/libffi-#{Formula["libffi"].version}/include
         -DFFI_LIBRARY_DIR=#{Formula["libffi"].opt_lib}
