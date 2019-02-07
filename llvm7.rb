@@ -1,4 +1,4 @@
-class Llvm < Formula
+class Llvm7 < Formula
     desc "Next-gen compiler infrastructure"
     homepage "https://llvm.org/"
   
@@ -98,8 +98,6 @@ class Llvm < Formula
       end
     end
   
-    keg_only :provided_by_macos
-  
     option "with-lldb", "Build LLDB debugger"
   
     # https://llvm.org/docs/GettingStarted.html#requirement
@@ -116,13 +114,7 @@ class Llvm < Formula
         :url      => "https://llvm.org/svn/llvm-project/lldb/trunk/docs/code-signing.txt",
       }]
     end
-  
-    # According to the official llvm readme, GCC 4.7+ is required
-    fails_with :gcc_4_2
-    ("4.3".."4.6").each do |n|
-      fails_with :gcc => n
-    end
-  
+
     def install
       # Apple's libstdc++ is too old to build LLVM
       ENV.libcxx if ENV.compiler == :clang
