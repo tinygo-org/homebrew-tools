@@ -6,5 +6,5 @@ Homebrew formula for installing LLVM 7 with WASM support. Required for using Tin
 
 ```
 brew tap tinygo-org/tools
-brew install llvm
+brew install llvm7
 ```
