@@ -9,7 +9,9 @@ class Tinygo < Formula
     bottle :unneeded
   
     def install
-        bin.install "bin/tinygo"
+        libexec.install "bin/tinygo"
+        (bin/"tinygo").write_env_script libexec/"tinygo",
+            :TINYGOROOT => prefix
         lib.install Dir["lib/*"]
         prefix.install "src"
         prefix.install "targets"
