@@ -1,4 +1,4 @@
-class TinyGo < Formula
+class Tinygo < Formula
     desc "TinyGo is a Go compiler for small places."
     homepage "https://tinygo.org/"
     version "0.4.2.0"
