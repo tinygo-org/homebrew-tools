@@ -1,10 +1,10 @@
 class Tinygo < Formula
-    desc "TinyGo is a Go compiler for small places."
+    desc "TinyGo is a Go compiler for small places. Microcontrollers, WebAssembly, and command-line tools. Based on LLVM."
     homepage "https://tinygo.org/"
-    version "0.4.2.0"
+    version "0.5.0"
   
-    url "https://411-136505169-gh.circle-artifacts.com/0/tmp/tinygo.darwin-amd64.tar.gz"
-    sha256 "4c664ff866fad2530122347c05f7ac40a76d22b83d76aa265a80372564737f05"
+    url "https://github.com/tinygo-org/tinygo/releases/download/v0.5.0/tinygo0.5.0.darwin-amd64.tar.gz"
+    sha256 "b4385e633726e715d036700078cc874015eeb9f4f458b16f41fd1acc2f74c0c4"
     
     bottle :unneeded
   
