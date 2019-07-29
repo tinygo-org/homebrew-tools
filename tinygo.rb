@@ -3,6 +3,8 @@ class Tinygo < Formula
     homepage "https://tinygo.org/"
     version "0.7.1"
   
+    depends_on "llvm"
+
     if OS.mac?
         url "https://github.com/tinygo-org/tinygo/releases/download/v#{version}/tinygo#{version}.darwin-amd64.tar.gz"
         sha256 "30caa68daf25316a241eb6dd8801529d01868248fd1e11d38f1f7276c652ad56"
