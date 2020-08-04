@@ -1,14 +1,14 @@
 class Tinygo < Formula
     desc "TinyGo is a Go compiler for small places. Microcontrollers, WebAssembly, and command-line tools. Based on LLVM."
     homepage "https://tinygo.org/"
-    version "0.13.1"
+    version "0.14.0"
   
     if OS.mac?
         url "https://github.com/tinygo-org/tinygo/releases/download/v#{version}/tinygo#{version}.darwin-amd64.tar.gz"
-        sha256 "cd64ddcfe71a6607a47fb7ec457ac29819bffb2da05ba1d2ffd617e3f1bb1bf7"
+        sha256 "624be22c1f9afd39fc6127a2af8ce759498b9a6f0d2ee411c0441392c8f7df32"
     elsif OS.linux?
         url "https://github.com/tinygo-org/tinygo/releases/download/v#{version}/tinygo#{version}.linux-amd64.tar.gz"
-        sha256 "a7ea6827faa70248bc5efdc8ed7f368d2ca4afed31aca974cf4fede9a3bedefc"
+        sha256 "538dd79185349093ced7a1ad3943b796d31ecec3d30b1d0d52fb3ef5af0fe21d"
     end
     
     bottle :unneeded
