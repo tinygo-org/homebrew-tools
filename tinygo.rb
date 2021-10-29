@@ -10,9 +10,7 @@ class Tinygo < Formula
         url "https://github.com/tinygo-org/tinygo/releases/download/v#{version}/tinygo#{version}.linux-amd64.tar.gz"
         sha256 "3b4130f0c5b3a22173c147e90629ea0a0bb52ec4bb50d309ff77bd19ccc80476"
     end
-    
-    bottle :unneeded
-  
+
     def install
         libexec.install "bin/tinygo"
         (bin/"tinygo").write_env_script libexec/"tinygo",
