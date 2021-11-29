@@ -13,6 +13,7 @@ class Tinygo < Formula
 
     def install
         libexec.install "bin/tinygo"
+        bin.install "bin/wasm-opt"
         (bin/"tinygo").write_env_script libexec/"tinygo",
             :TINYGOROOT => prefix
         lib.install Dir["lib/*"]
