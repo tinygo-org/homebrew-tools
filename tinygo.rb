@@ -2,6 +2,8 @@ class Tinygo < Formula
     desc "TinyGo is a Go compiler for small places. Microcontrollers, WebAssembly, and command-line tools. Based on LLVM."
     homepage "https://tinygo.org/"
     version "0.21.0"
+
+    depends_on "binaryen"
   
     if OS.mac?
         url "https://github.com/tinygo-org/tinygo/releases/download/v#{version}/tinygo#{version}.darwin-amd64.tar.gz"
@@ -13,7 +15,6 @@ class Tinygo < Formula
 
     def install
         libexec.install "bin/tinygo"
-        bin.install "bin/wasm-opt"
         (bin/"tinygo").write_env_script libexec/"tinygo",
             :TINYGOROOT => prefix
         lib.install Dir["lib/*"]
