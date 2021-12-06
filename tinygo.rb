@@ -3,8 +3,6 @@ class Tinygo < Formula
     homepage "https://tinygo.org/"
     version "0.21.0"
 
-    depends_on "binaryen"
-  
     if OS.mac?
         url "https://github.com/tinygo-org/tinygo/releases/download/v#{version}/tinygo#{version}.darwin-amd64.tar.gz"
         sha256 "20b0e4d74db4060b700d687d3e40c8ed2acc31c240ee9a73b473de05918a7e84"
@@ -17,6 +15,7 @@ class Tinygo < Formula
         libexec.install "bin/tinygo"
         (bin/"tinygo").write_env_script libexec/"tinygo",
             :TINYGOROOT => prefix
+        libexec.install "bin/wasm-opt"
         lib.install Dir["lib/*"]
         prefix.install "src"
         prefix.install "targets"
