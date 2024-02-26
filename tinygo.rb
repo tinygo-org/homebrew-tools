@@ -14,7 +14,6 @@ class Tinygo < Formula
             url "https://github.com/tinygo-org/tinygo/releases/download/v#{version}/tinygo#{version}.darwin-amd64.tar.gz"
             sha256 "ed871e55a57b7c0e0304a215214fc507bdd68a4655d99053f344463360183bd5"
         end
-      end
     end
     on_linux do
         url "https://github.com/tinygo-org/tinygo/releases/download/v#{version}/tinygo#{version}.linux-amd64.tar.gz"
@@ -33,5 +32,5 @@ class Tinygo < Formula
     test do
         system "#{bin}/tinygo", "version"
     end
-  end
+end
   
