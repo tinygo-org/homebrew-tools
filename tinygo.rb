@@ -1,23 +1,23 @@
 class Tinygo < Formula
     desc "TinyGo is a Go compiler for small places. Microcontrollers, WebAssembly, and command-line tools. Based on LLVM."
     homepage "https://tinygo.org/"
-    version "0.40.0"
+    version "0.40.1"
 
     depends_on "binaryen"
   
     on_macos do
         on_arm do
             url "https://github.com/tinygo-org/tinygo/releases/download/v#{version}/tinygo#{version}.darwin-arm64.tar.gz"
-            sha256 "c1df49eaee39c41b3bcb13f46a2e6824ee2c9d8cd0aa000dd2393ea92ace5806"
+            sha256 "a20841a616de3b3403e52e3789cb60c147ab52b3fe6c33b31fdffba0164ae031"
         end
         on_intel do
             url "https://github.com/tinygo-org/tinygo/releases/download/v#{version}/tinygo#{version}.darwin-amd64.tar.gz"
-            sha256 "2c43f77ec6fe8e68007856c98763233c22a02e0bc558d4197cf378353c34b7b7"
+            sha256 "36c9423a63f9548d142908b06c67e198d878a0fed076b8ec5dbf8a3350a73eb4"
         end
     end
     on_linux do
         url "https://github.com/tinygo-org/tinygo/releases/download/v#{version}/tinygo#{version}.linux-amd64.tar.gz"
-        sha256 "e56af1baabbf09b8b2c6320b76db57b0a9709405ea404fd9d770de8b9aa4c700"
+        sha256 "064fc0c07f4d71f7369b168c337caa88ef32a6b00b16449cea44790ccadfc2b4"
     end
 
     def install
